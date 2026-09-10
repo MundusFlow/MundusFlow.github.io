@@ -151,15 +151,9 @@ h1 {
 
 .calc-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
   margin: 0 0 16px 0;
-}
-
-@media (max-width: 480px) {
-  .calc-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .calc-link {
