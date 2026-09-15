@@ -151,8 +151,9 @@ h1 {
 
 .calc-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 24px;
   margin: 0 0 16px 0;
 }
 
@@ -212,5 +213,9 @@ h1 {
   .niche-banner-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .calc-grid {
+    grid-template-columns: 1fr;
   }
 }
