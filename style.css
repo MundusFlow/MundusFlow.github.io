@@ -80,17 +80,37 @@ h1 {
 }
 
 .niche-grid {
-  max-width: 920px;
+  max-width: 1390px;
   margin: 32px auto 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   align-items: start;
   gap: 20px;
+}
+
+.niche-grid > .niche {
+  grid-column: span 2;
+}
+
+.niche-grid > .niche:last-child:nth-child(3n+1) {
+  grid-column: span 6;
+}
+
+.niche-grid > .niche:nth-last-child(2):nth-child(3n+1),
+.niche-grid > .niche:nth-last-child(2):nth-child(3n+1) ~ .niche {
+  grid-column: span 3;
 }
 
 @media (max-width: 700px) {
   .niche-grid {
     grid-template-columns: 1fr;
+  }
+
+  .niche-grid > .niche,
+  .niche-grid > .niche:last-child:nth-child(3n+1),
+  .niche-grid > .niche:nth-last-child(2):nth-child(3n+1),
+  .niche-grid > .niche:nth-last-child(2):nth-child(3n+1) ~ .niche {
+    grid-column: auto;
   }
 }
 
