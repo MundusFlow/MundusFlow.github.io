@@ -7,6 +7,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #F2F2F2;
   color: #1A1A1A;
+  overflow-x: hidden;
 }
 
 .page {
@@ -241,6 +242,41 @@ h1 {
 .hero-visual {
   display: flex;
   justify-content: center;
+}
+
+.hero-stack {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 34px 10px 34px 60px;
+}
+
+.hero-stack-img {
+  position: absolute;
+  width: 88%;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-stack-img-1 {
+  top: -6px;
+  left: -6px;
+  transform: rotate(-7deg);
+}
+
+.hero-stack-img-2 {
+  top: 46px;
+  left: auto;
+  right: -34px;
+  transform: rotate(6deg);
+  z-index: 0;
+}
+
+.hero-stack .preview-card {
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
 }
 
 .preview-card {
@@ -520,6 +556,7 @@ h1 {
   text-align: center;
   font-size: 15px;
   padding: 14px 20px;
+  white-space: normal;
 }
 
 .calc-panel {
