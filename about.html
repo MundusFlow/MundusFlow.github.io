@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Mundus Flow</title>
+
+  <meta property="og:title" content="About Mundus Flow">
+  <meta property="og:description" content="Mundus Flow creates simple, practical digital tools for businesses, freelancers, tradespeople, and creators. Buy once, download, get to work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mundusflow.github.io/about.html">
+
+  <link rel="stylesheet" href="style.css?v=11">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="https://mundusflow.github.io/" class="topbar-logo">
+        <img src="images/mundusflow-logo.png" alt="Mundusflow" class="topbar-logo-img">
+        <span class="topbar-logo-text">Mundus Flow</span>
+      </a>
+
+      <nav class="topbar-nav">
+        <div class="dropdown" id="productsDropdown">
+          <button type="button" class="dropdown-toggle" id="productsToggle" aria-expanded="false" aria-haspopup="true">
+            Products <span class="caret">&#9662;</span>
+          </button>
+          <div class="dropdown-menu" id="productsMenu">
+            <a href="https://mundusflow.github.io/auto-shop-cfo/">&#128295; Auto Shop CFO</a>
+            <a href="https://mundusflow.github.io/electrician-business-cfo/">&#9889; Electrician CFO</a>
+            <a href="https://mundusflow.github.io/plumbing-business-cfo/">&#128703; Plumbing CFO</a>
+            <a href="https://mundusflow.github.io/freelance-tax-runway-estimator/">&#128188; Freelance CFO</a>
+            <a href="https://mundusflow.github.io/photographer-cfo/">&#128247; Photographer CFO</a>
+            <a href="https://mundusflow.github.io/cleaning-business-toolkit/">&#129529; Cleaning Business Toolkit</a>
+          </div>
+        </div>
+        <a href="free-tools.html" class="topbar-link">Free Tools</a>
+        <a href="about.html" class="topbar-link">About</a>
+        <a href="help.html" class="topbar-link">Help</a>
+      </nav>
+
+      <div class="topbar-right">
+        <span class="topbar-badge"><span class="badge-check">&#10003;</span> One-time purchase &middot; No subscription</span>
+        <span class="topbar-cart" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <p class="hero-eyebrow">ABOUT MUNDUS FLOW</p>
+      <h1>Practical Tools for People Who Actually Run Things.</h1>
+    </div>
+  </header>
+
+  <div class="page">
+
+    <div class="content-section">
+      <p>Mundus Flow creates simple digital tools designed to make everyday work easier &mdash; from business calculations and planning to organization and decision-making.</p>
+      <p>Our tools are built to be straightforward, useful, and ready to use. No complicated software, no monthly subscriptions, and no unnecessary features.</p>
+      <p>Buy once. Download. Get to work.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Simple by Design</h3>
+        <p>Tools that focus on solving one problem well.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Built for Real Work</h3>
+        <p>Practical spreadsheets, calculators, templates, and digital resources you can actually use.</p>
+      </div>
+      <div class="feature-card">
+        <h3>No Subscription Required</h3>
+        <p>Purchase what you need once and keep using it.</p>
+      </div>
+    </div>
+
+    <div class="industry-selector">
+      <p class="section-eyebrow">WHAT WE MAKE</p>
+      <h2 class="section-heading">A Growing Toolkit for Real Work</h2>
+    </div>
+
+    <div class="make-grid">
+      <div class="make-item"><span class="check-icon">&#10003;</span>Business &amp; finance tools</div>
+      <div class="make-item"><span class="check-icon">&#10003;</span>Calculators</div>
+      <div class="make-item"><span class="check-icon">&#10003;</span>Planning templates</div>
+      <div class="make-item"><span class="check-icon">&#10003;</span>Productivity tools</div>
+      <div class="make-item"><span class="check-icon">&#10003;</span>Excel &amp; Google Sheets resources</div>
+      <div class="make-item"><span class="check-icon">&#10003;</span>Other practical digital products</div>
+    </div>
+
+    <div class="footer">
+      <p>All calculators run entirely in your browser &mdash; nothing you type is sent or stored anywhere. These tools are for planning purposes only and are not tax or financial advice; consult a licensed professional for your specific situation.</p>
+      <p>&copy; <span id="year"></span> Mundusflow</p>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function () {
+      var wrap = document.getElementById('productsDropdown');
+      var toggle = document.getElementById('productsToggle');
+      if (!wrap || !toggle) return;
+
+      function closeMenu() {
+        wrap.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = wrap.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!wrap.contains(e.target)) closeMenu();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
