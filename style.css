@@ -259,10 +259,10 @@ h1 {
 }
 
 .hero-stack-img-1 {
-  width: 78%;
-  bottom: -40px;
-  left: -8px;
-  transform: rotate(-5deg);
+  width: 110%;
+  top: 150px;
+  left: -30px;
+  transform: rotate(-4deg);
 }
 
 .hero-stack-img-2 {
