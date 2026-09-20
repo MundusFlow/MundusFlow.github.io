@@ -173,7 +173,7 @@ body {
 
 .hero {
   background-color: #1F3864;
-  padding: 48px 24px;
+  padding: 48px 24px 68px 24px;
 }
 
 .hero-grid {
@@ -247,28 +247,29 @@ h1 {
 .hero-stack {
   position: relative;
   width: 100%;
-  max-width: 420px;
-  padding: 34px 10px 34px 60px;
+  max-width: 440px;
+  padding: 34px 10px 76px 20px;
 }
 
 .hero-stack-img {
   position: absolute;
-  width: 88%;
   z-index: 1;
   pointer-events: none;
   user-select: none;
 }
 
 .hero-stack-img-1 {
-  top: -6px;
-  left: -6px;
-  transform: rotate(-7deg);
+  width: 78%;
+  bottom: -40px;
+  left: -8px;
+  transform: rotate(-5deg);
 }
 
 .hero-stack-img-2 {
   top: 46px;
   left: auto;
   right: -34px;
+  width: 88%;
   transform: rotate(6deg);
   z-index: 0;
 }
