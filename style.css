@@ -849,6 +849,21 @@ h1 {
   margin: 0 0 20px 0;
 }
 
+.contact-cta p.contact-cta-alt {
+  margin: 14px 0 0 0;
+  font-size: 13.5px;
+}
+
+.contact-cta-alt a {
+  color: #1F3864;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-cta-alt a:hover {
+  text-decoration: underline;
+}
+
 .tool-group {
   max-width: 960px;
   margin: 0 auto 44px auto;
